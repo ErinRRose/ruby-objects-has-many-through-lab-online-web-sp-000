@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   attr_accessor :name
 
@@ -21,6 +23,7 @@ class Artist
   end
 
   def genres
-    songs.map(&:genre)
+    #songs.map(&:genre)
+    songs.map { |song| song.genre  }
   end
 end
